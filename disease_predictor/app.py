@@ -28,19 +28,21 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
+BASE_DIR = os.path.dirname(__file__)
+
 @st.cache_resource
 def load_model():
     try:
-        model_path = 'models/disease_model.pkl'
-        symptoms_path = 'models/symptom_names.pkl'
-        
+        model_path = os.path.join(BASE_DIR, "models", "disease_model.pkl")
+        symptoms_path = os.path.join(BASE_DIR, "models", "symptom_names.pkl")
+
         if not os.path.exists(model_path):
             st.error(f"Model file not found: {model_path}")
             st.stop()
         if not os.path.exists(symptoms_path):
             st.error(f"Symptoms file not found: {symptoms_path}")
             st.stop()
-            
+
         model = joblib.load(model_path)
         symptoms = joblib.load(symptoms_path)
         return model, symptoms
