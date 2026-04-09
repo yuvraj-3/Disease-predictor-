@@ -1,0 +1,21 @@
+fever,cough,sore_throat,fatigue,body_ache,headache,nausea,vomiting,diarrhea,rash,shortness_breath,congestion,chills,loss_taste,loss_smell,disease
+1,1,1,1,1,0,0,0,0,0,0,1,1,0,0,Common Cold
+1,1,1,1,1,1,0,0,0,0,0,1,1,1,1,COVID-19
+1,1,1,1,1,1,0,0,0,0,0,1,1,0,0,Flu
+1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,Malaria
+1,1,0,1,1,1,1,1,1,0,0,0,1,0,0,Gastroenteritis
+0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,Chickenpox
+1,0,1,1,1,0,0,0,0,0,0,0,0,0,0,Strep Throat
+0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,Migraines
+0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,Food Poisoning
+1,1,1,1,1,1,0,0,0,0,1,1,1,0,0,Pneumonia
+0,0,0,1,0,0,1,1,1,0,0,0,0,0,0,Stomach Flu
+1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,Dengue Fever
+0,1,0,1,0,0,0,0,0,0,1,1,0,0,0,Asthma
+0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,Allergies
+0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,Common Cold
+1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,Flu
+1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,Typhoid
+0,0,0,1,0,0,0,0,0,1,0,0,0,0,0,Allergies
+1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,Measles
+1,0,0,1,1,0,0,0,0,0,0,0,1,0,0,Malaria
