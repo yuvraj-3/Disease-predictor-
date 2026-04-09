@@ -2,6 +2,7 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
+import os
 
 st.set_page_config(
     page_title="Disease Predictor",
@@ -30,11 +31,21 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     try:
-        model = joblib.load('models/disease_model.pkl')
-        symptoms = joblib.load('models/symptom_names.pkl')
+        model_path = 'models/disease_model.pkl'
+        symptoms_path = 'models/symptom_names.pkl'
+        
+        if not os.path.exists(model_path):
+            st.error(f"Model file not found: {model_path}")
+            st.stop()
+        if not os.path.exists(symptoms_path):
+            st.error(f"Symptoms file not found: {symptoms_path}")
+            st.stop()
+            
+        model = joblib.load(model_path)
+        symptoms = joblib.load(symptoms_path)
         return model, symptoms
-    except:
-        st.error("Model not found. Run: python train_model.py")
+    except Exception as e:
+        st.error(f"Error loading model: {str(e)}")
         st.stop()
 
 model, symptoms = load_model()
